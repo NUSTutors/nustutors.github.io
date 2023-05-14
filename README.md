@@ -2,6 +2,12 @@
 
 Repo for Github Pages
 
+[https://nustutors.github.io](https://nustutors.github.io)
+
+## How to deploy?
+
+Follow the guide [here](https://github.com/gitname/react-gh-pages).
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
