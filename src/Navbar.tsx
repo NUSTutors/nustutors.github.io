@@ -93,6 +93,16 @@ function Navbar() {
               GitHub <HiExternalLink className="ml-1" />
             </Link>
           </li>
+          <li className={classPageLi}>
+            <Link
+              to="https://app.nustutors-dev.duckdns.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classPageLink}
+            >
+              Demo <HiExternalLink className="ml-1" />
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
