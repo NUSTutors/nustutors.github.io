@@ -48,6 +48,18 @@ function About() {
           </tr>
         </tbody>
       </table>
+
+      <p className={"mt-8 pl-8 pt-4 text-xl font-bold"}>Special Thanks</p>
+      <table className={"table-auto"}>
+        <tr>
+          <td className={"pl-8 pt-4 font-bold"}>Poster Design</td>
+        </tr>
+        <tr>
+          <td className={"pl-8 pt-4"}>
+            We would like to acknowledge Li Jiayi for their assistance.
+          </td>
+        </tr>
+      </table>
     </div>
   );
 }

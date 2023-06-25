@@ -35,6 +35,13 @@ export default function Liftoff() {
       <div className={"aspect-video w-full max-w-5xl px-8 py-4"}>
         <video controls width="100%">
           <source src="/liftoff/5732.mp4" type="video/mp4" />
+          <track
+            label="English"
+            kind="subtitles"
+            srcLang="en"
+            src="/liftoff/5732.vtt"
+            default
+          />
           Video tag not supported.
         </video>
       </div>
