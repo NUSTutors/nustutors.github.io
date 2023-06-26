@@ -65,9 +65,9 @@ function Navbar() {
         >
           <li className={classPageLi}>
             <Link
-              to={"/pages/about"}
+              to={"about"}
               className={`${
-                isActive("/pages/about") ? activeClassPageLink : classPageLink
+                isActive("about") ? activeClassPageLink : classPageLink
               }`}
             >
               About
@@ -75,9 +75,9 @@ function Navbar() {
           </li>
           <li className={classPageLi}>
             <Link
-              to={"/pages/liftoff"}
+              to={"liftoff"}
               className={`${
-                isActive("/pages/liftoff") ? activeClassPageLink : classPageLink
+                isActive("liftoff") ? activeClassPageLink : classPageLink
               }`}
             >
               Liftoff
@@ -85,11 +85,9 @@ function Navbar() {
           </li>
           <li className={classPageLi}>
             <Link
-              to={"/pages/milestone2"}
+              to={"milestone2"}
               className={`${
-                isActive("/pages/milestone2")
-                  ? activeClassPageLink
-                  : classPageLink
+                isActive("milestone2") ? activeClassPageLink : classPageLink
               }`}
             >
               Milestone 2
