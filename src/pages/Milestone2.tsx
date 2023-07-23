@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Liftoff() {
+export default function Milestone2() {
   const [usePNG, setUsePNG] = useState(true);
 
   const toggleUsePNG = () => {

@@ -95,6 +95,16 @@ function Navbar() {
           </li>
           <li className={classPageLi}>
             <Link
+              to={"milestone3"}
+              className={`${
+                isActive("milestone3") ? activeClassPageLink : classPageLink
+              }`}
+            >
+              Milestone 3
+            </Link>
+          </li>
+          <li className={classPageLi}>
+            <Link
               to="https://github.com/NUSTutors"
               target="_blank"
               rel="noopener noreferrer"
