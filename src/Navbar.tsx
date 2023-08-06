@@ -15,6 +15,13 @@ function Navbar() {
 
   const location = useLocation();
 
+  const navLinks = [
+    { title: "About", path: "/about" },
+    { title: "Poster", path: "/poster" },
+    { title: "Video", path: "/video" },
+    { title: "README", path: "/readme" },
+  ];
+
   const isActive = (path: string) => {
     return location.pathname === path;
   };
@@ -63,46 +70,20 @@ function Navbar() {
           className={`${isMenuOpen ? "flex" : "hidden"}
             "sm:items-center" w-full flex-col bg-gray-300 sm:flex-row sm:content-center`}
         >
-          <li className={classPageLi}>
-            <Link
-              to={"about"}
-              className={`${
-                isActive("about") ? activeClassPageLink : classPageLink
-              }`}
-            >
-              About
-            </Link>
-          </li>
-          <li className={classPageLi}>
-            <Link
-              to={"liftoff"}
-              className={`${
-                isActive("liftoff") ? activeClassPageLink : classPageLink
-              }`}
-            >
-              Liftoff
-            </Link>
-          </li>
-          <li className={classPageLi}>
-            <Link
-              to={"milestone2"}
-              className={`${
-                isActive("milestone2") ? activeClassPageLink : classPageLink
-              }`}
-            >
-              Milestone 2
-            </Link>
-          </li>
-          <li className={classPageLi}>
-            <Link
-              to={"milestone3"}
-              className={`${
-                isActive("milestone3") ? activeClassPageLink : classPageLink
-              }`}
-            >
-              Milestone 3
-            </Link>
-          </li>
+          {navLinks.map((link) => {
+            return (
+              <li className={classPageLi}>
+                <Link
+                  to={link.path}
+                  className={`${
+                    isActive(link.path) ? activeClassPageLink : classPageLink
+                  }`}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            );
+          })}
           <li className={classPageLi}>
             <Link
               to="https://github.com/NUSTutors"

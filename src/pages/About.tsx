@@ -1,5 +1,21 @@
 import React from "react";
 import { HiExternalLink } from "react-icons/hi";
+import { Link } from "react-router-dom";
+
+const orbitalMilestones = [
+  {
+    title: "Liftoff",
+    path: "/liftoff",
+  },
+  {
+    title: "Milestone 2",
+    path: "/milestone2",
+  },
+  {
+    title: "Milestone 3",
+    path: "/milestone3",
+  },
+];
 
 function About() {
   return (
@@ -49,17 +65,35 @@ function About() {
         </tbody>
       </table>
 
-      <p className={"mt-8 pl-8 pt-4 text-xl font-bold"}>Special Thanks</p>
+      <p className={"mt-8 pl-8 pt-4 text-xl font-bold"}>Advised by</p>
       <table className={"table-auto"}>
-        <tr>
-          <td className={"pl-8 pt-4 font-bold"}>Poster Design</td>
-        </tr>
-        <tr>
-          <td className={"pl-8 pt-4"}>
-            We would like to acknowledge Li Jiayi for their assistance.
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td className={"pl-8 pt-4"}>Koh Wen Jie</td>
+            <td className={"pl-8 pt-4"}>
+              <a
+                href={"https://github.com/kohwenjie"}
+                className={"flex items-center text-blue-700 underline"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @kohwenjie <HiExternalLink className="ml-1" />
+              </a>
+            </td>
+          </tr>
+        </tbody>
       </table>
+
+      <p className={"mt-8 pl-8 pt-4 text-xl font-bold"}>Orbital Milestones</p>
+      <ul>
+        {orbitalMilestones.map((milestone) => (
+          <li className={"pl-8 pt-4"} key={milestone.title}>
+            <Link to={milestone.path} className={"text-blue-600 underline"}>
+              {milestone.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

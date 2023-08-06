@@ -7,6 +7,9 @@ import Home from "./Home";
 import Liftoff from "./pages/Liftoff";
 import Milestone2 from "./pages/Milestone2";
 import Milestone3 from "./pages/Milestone3";
+import Poster from "./pages/Poster";
+import Video from "./pages/Video";
+import Readme from "./pages/Readme";
 
 export default function App() {
   return (
@@ -18,6 +21,9 @@ export default function App() {
         <Route path="liftoff" element={<Liftoff />} />
         <Route path="milestone2" element={<Milestone2 />} />
         <Route path="milestone3" element={<Milestone3 />} />
+        <Route path="poster" element={<Poster />} />
+        <Route path="video" element={<Video />} />
+        <Route path="readme" element={<Readme />} />
       </Routes>
     </>
   );
